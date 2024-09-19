@@ -1,0 +1,235 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas si no caben en una sola */
+    justify-content: space-around; /* Espacio entre tarjetas */
+    gap: 20px; /* Espacio entre cada tarjeta */
+    padding: 20px;
+  }
+  
+  .card {
+    flex: 1 1 300px; /* Cada tarjeta ocupará al menos 300px, y se ajustará según el espacio disponible */
+    max-width: 300px; /* Máximo ancho de cada tarjeta */
+    border: 1px solid #ddd; /* Estilo de borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    overflow: hidden; /* Evita que el contenido se desborde */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 100%; /* En pantallas más pequeñas, cada tarjeta ocupará todo el ancho disponible */
+    }
+  }
+  /* Footer General Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer .col {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #343a40;
+    font-size: 1.5rem;
+}
+
+.footer .social-icons a:hover {
+    color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+    }
+
+    .footer .col {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* aqui va lo de products */
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aumentar la separación horizontal */
+  gap: 30px; /* Mayor espacio entre las tarjetas */
+  padding: 20px;
+  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+
+}
+
+#search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aumentar la separación horizontal */
+  gap: 30px; /* Mayor espacio entre las tarjetas */
+  padding: 20px;
+  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+
+}
+
+/* Estilo para cada tarjeta de producto */
+.prod-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Al hacer hover sobre la tarjeta */
+.prod-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del producto */
+.prod-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Estilo para el nombre del producto */
+.prod-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la descripción con más espacio */
+.prod-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px; /* Aumenta el espacio entre la descripción y el resto */
+  height: 60px; /* Aumenta el espacio disponible para la descripción */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas la descripción */
+  -webkit-box-orient: vertical;
+}
+
+/* Estilo para el tamaño y el precio */
+.prod-card h4 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Botón de compra */
+.prod-card button {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón de compra */
+.prod-card button:hover {
+  background-color: #ff4040;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
