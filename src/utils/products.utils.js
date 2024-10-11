@@ -1,8 +1,8 @@
 ////////////
+//aqui taere la funcion de createProductRenderCart
+import { CartController } from "../controllers/cartController.js";
+const cartController = new CartController();
 
-function comprar(params) {
-  console.log("comprado", params);
-}
 //////////////////////
 
 export const renderProducts = (products) => {
@@ -18,12 +18,14 @@ export const renderProducts = (products) => {
       prodCard.innerHTML = `<h3>${prod.name}</h3>
       <img src="${prod.img}">
       <p>${prod.description} </p>
-      <h4>${prod.size} </h4>
-      <h4>${prod.price}</h4>
+      <h4>Size: ${prod.size} </h4>
+      <h4>$ ${prod.price}</h4>
       `; //aqui ponemos la estrucutra html que vayamos a querer en cada objeto
       const button = document.createElement("button");
       button.innerText = "Comprar";
-      button.addEventListener("click", () => comprar(prod.id));
+      button.addEventListener("click", () =>
+        cartController.createProductInCart(prod)
+      );
 
       prodCard.appendChild(button);
 
