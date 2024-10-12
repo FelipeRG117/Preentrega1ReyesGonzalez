@@ -60,6 +60,9 @@ export class CartController {
       const prod = { ...product, count: 1 }; //ya destrcucture el objeto y le agregue un campo ahora guardo en el localStorage con setItem
       console.log("this is prod", prod);
       localStorage.setItem(`product${prod.id}`, JSON.stringify(prod));
+      //
+      const getProductsInCart = this.readAllProductsInCart();
+      productsInCartRender(getProductsInCart);
 
       console.log("este es product para cart", product);
     } catch (error) {
