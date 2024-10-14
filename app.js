@@ -3,7 +3,7 @@ import { searchProducts } from "./src/components/search.js";
 import { handleCartButton } from "./src/components/cart-button.js";
 import { getProductsRender } from "./src/routes/products.router.js";
 import { CartController } from "./src/controllers/cartController.js";
-
+import { navCategoryRenderButton } from "./src/components/nav-category-button.js";
 const cartController = new CartController();
 
 /* productController.getData();
@@ -15,6 +15,7 @@ console.log(container); */
 // Renderizar productos cuando la página cargue
 
 document.addEventListener("DOMContentLoaded", () => {
+  navCategoryRenderButton();
   getProductsRender(); // Mostrar productos
   searchProducts();
   handleCartButton();
